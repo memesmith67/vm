@@ -1,10 +1,8 @@
-//gcc -O3 -march=native -flto vm.c#license:john morris beck gpl2 @ gnu.org
-//in case i die future design envolves incresasing register space for speedy caching, and replacing
-//malloc and free for mmap an munmap, and make the files be in /dev/shm or fallback to /dev/tmp if shm is unavailable
-//a special naming scheme with guarnteed unique filenames based on timestamp, process id, and a random string from /dev/urandom allows
-//for optional shared memory between vm processes. shared memory is intended to be used immutably where possible else with locks
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #define c(x,y) case x: y;break;
-int main(){int x,y,z,t=9999,s=sizeof(int);int *g=malloc(s*t),*h;while('\n'!=(g[--t]=getchar()));t++;while(1){z=(g+t)[0];x=(g+t)[1];y=(g+t)[2];switch(z){c('q',exit(0))c('-',g[x]-=g[y])c('<',g[x]=g[x]<g[y])c('r',g[y]=g[g[x]])c('w',g[g[y]]=g[x])c('a',h=realloc(g,s*g[x]);h==NULL?g[y]=0:(g=h))c('i',z=g[x];while('\n'!=(*(g+z++)=getchar())))c('o',z=g[x];while(*(g+z))putchar(*(g+z++)))c('x',t=g[x]-3)}t+=3;}}
+#define w(x,y) while(x){y;}
+#define a g[x]
+#define b g[y]
+int main(){int x,y,z,t=9999,s=sizeof(int);int *g=malloc(s*t),*h;w('\n'!=(g[--t]=getchar()))t++;w(1,h=g+t;z=h[0];x=h[1];y=h[2];switch(z){c('q',exit(0))c('-',a-=b)c('<',a=a<b)c('r',b=g[a])c('w',g[b]=a)c('a',h=realloc(g,s*a);h==NULL?b=0:(g=h))c('i',z=a;w('\n'!=(*(g+z++)=getchar())))c('o',z=a;w(*(g+z),putchar(*(g+z++))))c('x',t=a-3)}t+=3)}
