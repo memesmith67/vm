@@ -6,5 +6,4 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define c(x,y) case x: y;break;
-int main(){int x=0,y,z,i[256],f[999],*t=f;void* p[256];*i=1;*p=&t;while(t[x++]=getchar());while(1){x=t[1];y=t[2];z=*t;switch(z){c(0,exit(0))c(1,i[x]-=i[y])c(2,i[x]=i[x]<i[y])c(3,p[y]=p[x])c(4,i[y]=i[x])c(5,p[y]=*(void**)p[x])c(6,*(void**)p[y]=p[x])c(7,p[y]=(void*)((char*)(p[y]+(int)i[x])))c(8,p[y]=malloc(i[x]);i[x]=(p[y]==NULL))c(9,free(p[y]))c(10,fread(p[y],1,i[y],stdin))c(11,fwrite(p[y],1,i[y],stdout);fflush(stdout))}t+=3;}}
+#define c(x,y) case x: y;break;int main(){int x,y,z,t=9999,*g=malloc((sizeof int)*9999),*h;while(g[t--]=getchar());while(1){z=t[0];x=t[1];y=t[2];switch(z){c('q',exit(0))c('-',g[x]-=g[y])c('<',g[x]=g[x]<g[y])c('r',g[y]=g[g[x]])c('w',g[g[y]]=g[x])c('a',h=realloc(g,(sizeof int)*g[x]);free(g);g=h)c('i',z=g[x];while('\n'!=(*(g+z++)=getchar())))c('o',z=g[x];while(*(g+z))putchar(*(g+z++)))}t+=3;}}
