@@ -1,6 +1,4 @@
 //license:john morris beck 2026 gpl2 @ gnu.org
-//gcc -O3 -march=native -flto vm.c
-//todo: replace malloc and free for mmap an munmap, and make the files be in /dev/shm or fallback to /dev/tmp if shm is unavailable for shared memory between vm processes.
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
